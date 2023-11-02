@@ -137,6 +137,13 @@
             <version>1.9.4</version>
             <scope>compile</scope>
         </dependency>
+        <!--添加guava  布隆过滤器   BloomFilter 类来实现布隆过滤器 -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>31.1-jre</version>
+        </dependency>
+
     </dependencies>
 
 

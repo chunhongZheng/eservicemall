@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-resource-backend
+spec:
+  defaultBackend:
+    resource:
+      apiGroup: tomcat6.kubenetes.com
+      kind: StorageBucket
+      name: static-assets
+  rules:
+    - host: tomcat6.kubenetes.com
+      http:
+      paths:
+          backend:
+            service:
+              name: tomcat6
+              port:
+                number: 80
